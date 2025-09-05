@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LovMe Cosmetics - Premium Beauty Products</title>
+    <meta name="description" content="Discover premium cosmetic products at LovMe. From foundations to lipsticks, find your perfect beauty essentials.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>LovMe Cosmetics</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/products.html">Products</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-count">0</span></a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Natural Beauty</h2>
+            <p>Premium cosmetics crafted with love and care for the modern woman</p>
+            <a href="pages/products.html" class="cta-button">Shop Now</a>
+        </div>
+        <div class="hero-image">
+            <div class="placeholder-image">
+                <i class="fas fa-palette fa-8x"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h3>Shop by Category</h3>
+            <div class="category-grid">
+                <div class="category-card" data-category="face">
+                    <div class="category-icon"><i class="fas fa-user-circle fa-3x"></i></div>
+                    <h4>Face</h4>
+                    <p>Foundations, Concealers, Blush</p>
+                </div>
+                <div class="category-card" data-category="eyes">
+                    <div class="category-icon"><i class="fas fa-eye fa-3x"></i></div>
+                    <h4>Eyes</h4>
+                    <p>Eyeshadows, Mascara, Eyeliner</p>
+                </div>
+                <div class="category-card" data-category="lips">
+                    <div class="category-icon"><i class="fas fa-kiss fa-3x"></i></div>
+                    <h4>Lips</h4>
+                    <p>Lipsticks, Glosses, Liners</p>
+                </div>
+                <div class="category-card" data-category="body">
+                    <div class="category-icon"><i class="fas fa-spa fa-3x"></i></div>
+                    <h4>Body</h4>
+                    <p>Lotions, Scrubs, Perfumes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h3>Featured Products</h3>
+            <div class="product-grid" id="featured-products">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Get the latest beauty tips and product launches</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LovMe Cosmetics</h4>
+                    <p>Premium beauty products for the modern woman</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/products.html">Products</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@lovmecosmetics.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LovMe Cosmetics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
