@@ -77,7 +77,7 @@ function displayFeaturedProducts() {
             </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
-                <div class="product-price">$${product.price}</div>
+                <div class="product-price">₹${product.price}</div>
                 <button class="add-to-cart" onclick="addToCart(${product.id})">
                     Add to Cart
                 </button>
@@ -179,7 +179,7 @@ function initializeEventListeners() {
 
 // Utility functions
 function formatPrice(price) {
-    return `$${price.toFixed(2)}`;
+    return `₹${price.toFixed(0)}`;
 }
 
 function getCartTotal() {

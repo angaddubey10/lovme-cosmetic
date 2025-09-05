@@ -34,7 +34,7 @@ function displayCart() {
             <div class="item-details">
                 <h4>${item.name}</h4>
                 <p class="item-category">${capitalize(item.category)}</p>
-                <p class="item-price">$${item.price.toFixed(2)} each</p>
+                <p class="item-price">₹${item.price.toFixed(0)} each</p>
             </div>
             <div class="quantity-controls">
                 <button onclick="updateQuantity(${item.id}, -1)" class="qty-btn">-</button>
@@ -42,7 +42,7 @@ function displayCart() {
                 <button onclick="updateQuantity(${item.id}, 1)" class="qty-btn">+</button>
             </div>
             <div class="item-total">
-                $${(item.price * item.quantity).toFixed(2)}
+                ₹${(item.price * item.quantity).toFixed(0)}
             </div>
             <button onclick="removeFromCart(${item.id})" class="remove-btn">
                 <i class="fas fa-trash"></i>
@@ -96,10 +96,10 @@ function updateCartSummary() {
     const tax = subtotal * 0.08; // 8% tax
     const total = subtotal + tax;
     
-    document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
-    document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
-    document.getElementById('total').textContent = `$${total.toFixed(2)}`;
-    document.getElementById('modal-total').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('subtotal').textContent = `₹${subtotal.toFixed(0)}`;
+    document.getElementById('tax').textContent = `₹${tax.toFixed(0)}`;
+    document.getElementById('total').textContent = `₹${total.toFixed(0)}`;
+    document.getElementById('modal-total').textContent = `₹${total.toFixed(0)}`;
 }
 
 function proceedToCheckout() {
@@ -182,7 +182,7 @@ function showSuccessMessage(orderData) {
                 <i class="fas fa-check-circle fa-4x" style="color: #28a745; margin-bottom: 1rem;"></i>
                 <h2>Order Placed Successfully!</h2>
                 <p>Thank you for your purchase, ${orderData.customer.fullName}!</p>
-                <p>Order total: $${(orderData.total * 1.08).toFixed(2)}</p>
+                <p>Order total: ₹${(orderData.total * 1.08).toFixed(0)}</p>
                 <p>A confirmation email has been sent to ${orderData.customer.email}</p>
                 <p>You will be redirected to the homepage shortly...</p>
             </div>

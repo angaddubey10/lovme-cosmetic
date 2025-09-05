@@ -83,7 +83,7 @@ function displayProducts(productsToShow) {
                 <div class="product-name">${product.name}</div>
                 <div class="product-category">${capitalize(product.category)}</div>
                 <div class="product-description">${product.description}</div>
-                <div class="product-price">$${product.price.toFixed(2)}</div>
+                <div class="product-price">₹${product.price.toFixed(0)}</div>
                 <button class="add-to-cart" onclick="addToCartFromProducts(${product.id})" 
                         ${!product.inStock ? 'disabled' : ''}>
                     ${product.inStock ? 'Add to Cart' : 'Out of Stock'}

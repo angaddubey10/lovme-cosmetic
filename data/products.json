@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Flawless Foundation - Ivory",
       "category": "face",
-      "price": 32.99,
+      "price": 2738,
       "description": "Full coverage liquid foundation for a flawless finish",
       "image": "foundation-ivory.jpg",
       "inStock": true
@@ -13,7 +13,7 @@
       "id": 2,
       "name": "Flawless Foundation - Beige",
       "category": "face",
-      "price": 32.99,
+      "price": 2738,
       "description": "Full coverage liquid foundation for a flawless finish",
       "image": "foundation-beige.jpg",
       "inStock": true
@@ -22,7 +22,7 @@
       "id": 3,
       "name": "Flawless Foundation - Honey",
       "category": "face",
-      "price": 32.99,
+      "price": 2738,
       "description": "Full coverage liquid foundation for a flawless finish",
       "image": "foundation-honey.jpg",
       "inStock": true
@@ -31,7 +31,7 @@
       "id": 4,
       "name": "Perfect Coverage Concealer",
       "category": "face",
-      "price": 18.99,
+      "price": 1576,
       "description": "High coverage concealer for blemishes and dark circles",
       "image": "concealer.jpg",
       "inStock": true
@@ -40,7 +40,7 @@
       "id": 5,
       "name": "Rosy Glow Blush",
       "category": "face",
-      "price": 24.99,
+      "price": 2074,
       "description": "Natural-looking blush for a healthy glow",
       "image": "blush-rosy.jpg",
       "inStock": true
@@ -49,7 +49,7 @@
       "id": 6,
       "name": "Golden Hour Highlighter",
       "category": "face",
-      "price": 28.99,
+      "price": 2406,
       "description": "Luminous highlighter for that perfect glow",
       "image": "highlighter-golden.jpg",
       "inStock": true
@@ -58,7 +58,7 @@
       "id": 7,
       "name": "Sunset Dreams Eyeshadow Palette",
       "category": "eyes",
-      "price": 45.99,
+      "price": 3817,
       "description": "12-shade eyeshadow palette with warm sunset tones",
       "image": "eyeshadow-sunset.jpg",
       "inStock": true
@@ -67,7 +67,7 @@
       "id": 8,
       "name": "Volume Max Mascara",
       "category": "eyes",
-      "price": 22.99,
+      "price": 1908,
       "description": "Volumizing mascara for dramatic lashes",
       "image": "mascara-volume.jpg",
       "inStock": true
@@ -76,7 +76,7 @@
       "id": 9,
       "name": "Precision Eyeliner - Black",
       "category": "eyes",
-      "price": 16.99,
+      "price": 1410,
       "description": "Waterproof liquid eyeliner for precise application",
       "image": "eyeliner-black.jpg",
       "inStock": true
@@ -85,7 +85,7 @@
       "id": 10,
       "name": "Perfect Arch Eyebrow Pencil",
       "category": "eyes",
-      "price": 14.99,
+      "price": 1244,
       "description": "Long-lasting eyebrow pencil for defined brows",
       "image": "eyebrow-pencil.jpg",
       "inStock": true
@@ -94,7 +94,7 @@
       "id": 11,
       "name": "Shadow Base Eye Primer",
       "category": "eyes",
-      "price": 19.99,
+      "price": 1659,
       "description": "Long-wearing eyeshadow primer for vibrant colors",
       "image": "eye-primer.jpg",
       "inStock": true
@@ -103,7 +103,7 @@
       "id": 12,
       "name": "Glamour Lashes",
       "category": "eyes",
-      "price": 12.99,
+      "price": 1078,
       "description": "Premium false eyelashes for dramatic effect",
       "image": "false-lashes.jpg",
       "inStock": true
@@ -112,7 +112,7 @@
       "id": 13,
       "name": "Velvet Matte Lipstick - Ruby Red",
       "category": "lips",
-      "price": 26.99,
+      "price": 2240,
       "description": "Long-lasting matte lipstick in classic red",
       "image": "lipstick-ruby.jpg",
       "inStock": true
@@ -121,7 +121,7 @@
       "id": 14,
       "name": "Velvet Matte Lipstick - Berry Kiss",
       "category": "lips",
-      "price": 26.99,
+      "price": 2240,
       "description": "Long-lasting matte lipstick in deep berry",
       "image": "lipstick-berry.jpg",
       "inStock": true
@@ -130,7 +130,7 @@
       "id": 15,
       "name": "Crystal Clear Lip Gloss",
       "category": "lips",
-      "price": 18.99,
+      "price": 1576,
       "description": "High-shine lip gloss for glossy lips",
       "image": "lip-gloss.jpg",
       "inStock": true
@@ -139,7 +139,7 @@
       "id": 16,
       "name": "Perfect Line Lip Liner",
       "category": "lips",
-      "price": 13.99,
+      "price": 1161,
       "description": "Creamy lip liner for precise application",
       "image": "lip-liner.jpg",
       "inStock": true
@@ -148,7 +148,7 @@
       "id": 17,
       "name": "Nourishing Lip Balm",
       "category": "lips",
-      "price": 8.99,
+      "price": 746,
       "description": "Moisturizing lip balm with natural ingredients",
       "image": "lip-balm.jpg",
       "inStock": true
@@ -157,7 +157,7 @@
       "id": 18,
       "name": "Silky Smooth Body Lotion",
       "category": "body",
-      "price": 24.99,
+      "price": 2074,
       "description": "Hydrating body lotion with luxurious scent",
       "image": "body-lotion.jpg",
       "inStock": true
@@ -166,7 +166,7 @@
       "id": 19,
       "name": "Exfoliating Sugar Scrub",
       "category": "body",
-      "price": 29.99,
+      "price": 2489,
       "description": "Gentle exfoliating scrub for smooth skin",
       "image": "body-scrub.jpg",
       "inStock": true
@@ -175,7 +175,7 @@
       "id": 20,
       "name": "Enchanted Rose Perfume",
       "category": "body",
-      "price": 65.99,
+      "price": 5477,
       "description": "Elegant floral fragrance with rose notes",
       "image": "perfume-rose.jpg",
       "inStock": true
@@ -184,7 +184,7 @@
       "id": 21,
       "name": "Contour & Highlight Kit",
       "category": "face",
-      "price": 38.99,
+      "price": 3236,
       "description": "Complete contouring kit with 6 shades",
       "image": "contour-kit.jpg",
       "inStock": true
@@ -193,7 +193,7 @@
       "id": 22,
       "name": "Waterproof Mascara",
       "category": "eyes",
-      "price": 24.99,
+      "price": 2074,
       "description": "Long-lasting waterproof formula",
       "image": "mascara-waterproof.jpg",
       "inStock": true
@@ -202,7 +202,7 @@
       "id": 23,
       "name": "Nude Lipstick Collection",
       "category": "lips",
-      "price": 42.99,
+      "price": 3568,
       "description": "Set of 4 nude lipstick shades",
       "image": "nude-collection.jpg",
       "inStock": true
@@ -211,7 +211,7 @@
       "id": 24,
       "name": "Anti-Aging Night Cream",
       "category": "body",
-      "price": 55.99,
+      "price": 4647,
       "description": "Rejuvenating night cream for youthful skin",
       "image": "night-cream.jpg",
       "inStock": true
