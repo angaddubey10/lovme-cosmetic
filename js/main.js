@@ -70,10 +70,18 @@ function displayFeaturedProducts() {
     // Show first 8 products as featured
     const featuredProducts = products.slice(0, 8);
     
-    container.innerHTML = featuredProducts.map(product => `
+    container.innerHTML = featuredProducts.map(product => {
+        // Ensure image path is absolute from root
+        let imagePath = product.image;
+        if (imagePath && !imagePath.startsWith('/') && !imagePath.startsWith('http')) {
+            imagePath = '/' + imagePath;
+        }
+        
+        return `
         <div class="product-card">
             <div class="product-image">
-                <i class="fas fa-star fa-3x"></i>
+                <img src="${imagePath}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <i class="fas fa-star fa-3x" style="display: none;"></i>
             </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
@@ -83,7 +91,8 @@ function displayFeaturedProducts() {
                 </button>
             </div>
         </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 // Add product to cart

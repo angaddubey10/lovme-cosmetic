@@ -6,7 +6,7 @@
       "category": "face",
       "price": 2738,
       "description": "Full coverage liquid foundation for a flawless finish",
-      "image": "foundation-ivory.jpg",
+      "image": "images/ivory.png",
       "inStock": true
     },
     {
@@ -15,7 +15,7 @@
       "category": "face",
       "price": 2738,
       "description": "Full coverage liquid foundation for a flawless finish",
-      "image": "foundation-beige.jpg",
+      "image": "images/beige.png",
       "inStock": true
     },
     {
@@ -24,7 +24,7 @@
       "category": "face",
       "price": 2738,
       "description": "Full coverage liquid foundation for a flawless finish",
-      "image": "foundation-honey.jpg",
+      "image": "images/honey.png",
       "inStock": true
     },
     {
@@ -33,7 +33,7 @@
       "category": "face",
       "price": 1576,
       "description": "High coverage concealer for blemishes and dark circles",
-      "image": "concealer.jpg",
+      "image": "images/concealer.png",
       "inStock": true
     },
     {
@@ -42,7 +42,7 @@
       "category": "face",
       "price": 2074,
       "description": "Natural-looking blush for a healthy glow",
-      "image": "blush-rosy.jpg",
+      "image": "images/blush.png",
       "inStock": true
     },
     {
@@ -51,7 +51,7 @@
       "category": "face",
       "price": 2406,
       "description": "Luminous highlighter for that perfect glow",
-      "image": "highlighter-golden.jpg",
+      "image": "images/highlighter.png",
       "inStock": true
     },
     {
@@ -60,7 +60,7 @@
       "category": "eyes",
       "price": 3817,
       "description": "12-shade eyeshadow palette with warm sunset tones",
-      "image": "eyeshadow-sunset.jpg",
+      "image": "images/eye_Shadow.png",
       "inStock": true
     },
     {
@@ -69,7 +69,7 @@
       "category": "eyes",
       "price": 1908,
       "description": "Volumizing mascara for dramatic lashes",
-      "image": "mascara-volume.jpg",
+      "image": "images/max_volume.png",
       "inStock": true
     },
     {
