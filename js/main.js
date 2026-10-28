@@ -4,7 +4,9 @@ let products = [];
 
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
-    loadProducts();
+    if (document.getElementById('featured-products')) {
+        loadProducts();
+    }
     updateCartCount();
     initializeEventListeners();
 });
@@ -12,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load products from JSON
 async function loadProducts() {
     try {
-        const response = await fetch('data/products.json');
+        const response = await fetch('data/products.json', { cache: 'no-cache' });
         const data = await response.json();
         products = data.products;
         displayFeaturedProducts();
@@ -30,7 +32,7 @@ function createSampleProducts() {
             id: 1,
             name: "Flawless Foundation",
             category: "face",
-            price: 32.99,
+            price: 499,
             description: "Full coverage liquid foundation",
             inStock: true
         },
@@ -38,7 +40,7 @@ function createSampleProducts() {
             id: 2,
             name: "Volume Max Mascara",
             category: "eyes",
-            price: 22.99,
+            price: 299,
             description: "Volumizing mascara for dramatic lashes",
             inStock: true
         },
@@ -46,7 +48,7 @@ function createSampleProducts() {
             id: 3,
             name: "Velvet Matte Lipstick",
             category: "lips",
-            price: 26.99,
+            price: 299,
             description: "Long-lasting matte lipstick",
             inStock: true
         },
@@ -54,7 +56,7 @@ function createSampleProducts() {
             id: 4,
             name: "Silky Body Lotion",
             category: "body",
-            price: 24.99,
+            price: 249,
             description: "Hydrating body lotion",
             inStock: true
         }
@@ -74,10 +76,11 @@ function displayFeaturedProducts() {
         <div class="product-card">
             <div class="product-image">
                 <i class="fas fa-star fa-3x"></i>
+                ${product.image ? `<img src="images/${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove()">` : ''}
             </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
-                <div class="product-price">₹${product.price}</div>
+                <div class="product-price">${formatPrice(product.price)}</div>
                 <button class="add-to-cart" onclick="addToCart(${product.id})">
                     Add to Cart
                 </button>
@@ -187,8 +190,8 @@ function getCartTotal() {
 }
 
 // Add CSS animation for notifications
-const style = document.createElement('style');
-style.textContent = `
+const notificationStyle = document.createElement('style');
+notificationStyle.textContent = `
     @keyframes slideIn {
         from {
             transform: translateX(100%);
@@ -204,4 +207,4 @@ style.textContent = `
         animation: slideIn 0.3s ease;
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(notificationStyle);

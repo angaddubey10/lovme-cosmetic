@@ -1,5 +1,4 @@
-// Cart page functionality
-let cart = [];
+// Cart page functionality (relies on `cart`, updateCartCount and showNotification from main.js)
 
 document.addEventListener('DOMContentLoaded', function() {
     loadCart();
@@ -30,6 +29,7 @@ function displayCart() {
         <div class="cart-item">
             <div class="item-image">
                 <i class="fas fa-${getProductIcon(item.category)} fa-2x"></i>
+                ${item.image ? `<img src="../images/${item.image}" alt="${item.name}" onerror="this.remove()">` : ''}
             </div>
             <div class="item-details">
                 <h4>${item.name}</h4>
@@ -248,8 +248,22 @@ style.textContent = `
     }
     
     .item-image {
-        text-align: center;
+        position: relative;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #ff6b9d;
+    }
+    
+    .item-image img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
     }
     
     .item-details h4 {

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadProductsData() {
     try {
-        const response = await fetch('../data/products.json');
+        const response = await fetch('../data/products.json', { cache: 'no-cache' });
         const data = await response.json();
         allProducts = data.products;
         filteredProducts = [...allProducts];
@@ -28,7 +28,7 @@ function createFallbackProducts() {
             id: 1,
             name: "Flawless Foundation - Ivory",
             category: "face",
-            price: 32.99,
+            price: 499,
             description: "Full coverage liquid foundation for a flawless finish",
             inStock: true
         },
@@ -36,7 +36,7 @@ function createFallbackProducts() {
             id: 2,
             name: "Volume Max Mascara",
             category: "eyes",
-            price: 22.99,
+            price: 299,
             description: "Volumizing mascara for dramatic lashes",
             inStock: true
         },
@@ -44,7 +44,7 @@ function createFallbackProducts() {
             id: 3,
             name: "Velvet Matte Lipstick - Ruby Red",
             category: "lips",
-            price: 26.99,
+            price: 299,
             description: "Long-lasting matte lipstick in classic red",
             inStock: true
         },
@@ -52,7 +52,7 @@ function createFallbackProducts() {
             id: 4,
             name: "Silky Smooth Body Lotion",
             category: "body",
-            price: 24.99,
+            price: 249,
             description: "Hydrating body lotion with luxurious scent",
             inStock: true
         }
@@ -78,6 +78,7 @@ function displayProducts(productsToShow) {
         <div class="product-card" data-category="${product.category}">
             <div class="product-image">
                 <i class="fas fa-${getProductIcon(product.category)} fa-3x"></i>
+                ${product.image ? `<img src="../images/${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove()">` : ''}
             </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
@@ -111,7 +112,7 @@ function addToCartFromProducts(productId) {
     const product = allProducts.find(p => p.id === productId);
     if (!product) return;
     
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingItem = cart.find(item => item.id === productId);
     
     if (existingItem) {
