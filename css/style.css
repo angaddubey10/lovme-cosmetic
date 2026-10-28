@@ -61,20 +61,6 @@ body {
     opacity: 0.8;
 }
 
-.cart-link {
-    position: relative;
-}
-
-#cart-count {
-    background: #fff;
-    color: #ff6b9d;
-    border-radius: 50%;
-    padding: 0.2rem 0.5rem;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-left: 0.5rem;
-}
-
 .mobile-menu-toggle {
     display: none;
     font-size: 1.5rem;
@@ -257,23 +243,6 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: #ff6b9d;
-    margin-bottom: 1rem;
-}
-
-.add-to-cart {
-    background: #ff6b9d;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    transition: background 0.3s;
-}
-
-.add-to-cart:hover {
-    background: #c44569;
 }
 
 /* Newsletter */
@@ -404,5 +373,5 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }

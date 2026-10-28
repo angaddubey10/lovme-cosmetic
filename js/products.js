@@ -85,10 +85,6 @@ function displayProducts(productsToShow) {
                 <div class="product-category">${capitalize(product.category)}</div>
                 <div class="product-description">${product.description}</div>
                 <div class="product-price">₹${product.price.toFixed(0)}</div>
-                <button class="add-to-cart" onclick="addToCartFromProducts(${product.id})" 
-                        ${!product.inStock ? 'disabled' : ''}>
-                    ${product.inStock ? 'Add to Cart' : 'Out of Stock'}
-                </button>
             </div>
         </div>
     `).join('');
@@ -106,27 +102,6 @@ function getProductIcon(category) {
 
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-function addToCartFromProducts(productId) {
-    const product = allProducts.find(p => p.id === productId);
-    if (!product) return;
-    
-    cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const existingItem = cart.find(item => item.id === productId);
-    
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cart.push({
-            ...product,
-            quantity: 1
-        });
-    }
-    
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-    showNotification(`${product.name} added to cart!`);
 }
 
 function initializeFilters() {
@@ -191,20 +166,13 @@ function filterProducts() {
 }
 
 function checkUrlParams() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category');
-    
-    if (category) {
-        // Add a small delay to ensure DOM is ready
-        setTimeout(() => {
-            const categoryFilter = document.getElementById('category-filter');
-            if (categoryFilter && allProducts.length > 0) {
-                categoryFilter.value = category;
-                console.log('Setting category filter to:', category);
-                // Trigger filtering after setting the value
-                filterProducts();
-            }
-        }, 100);
+    const category = new URLSearchParams(window.location.search).get('category');
+    if (!category) return;
+
+    filteredProducts = allProducts.filter(product => product.category === category);
+    const heading = document.getElementById('category-display');
+    if (heading) {
+        heading.textContent = `${capitalize(category)} Products`;
     }
 }
 

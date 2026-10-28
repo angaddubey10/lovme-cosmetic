@@ -1,5 +1,4 @@
 // Global variables
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let products = [];
 
 // DOM Content Loaded
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('featured-products')) {
         loadProducts();
     }
-    updateCartCount();
     initializeEventListeners();
 });
 
@@ -81,42 +79,9 @@ function displayFeaturedProducts() {
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
                 <div class="product-price">${formatPrice(product.price)}</div>
-                <button class="add-to-cart" onclick="addToCart(${product.id})">
-                    Add to Cart
-                </button>
             </div>
         </div>
     `).join('');
-}
-
-// Add product to cart
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
-    if (!product) return;
-    
-    const existingItem = cart.find(item => item.id === productId);
-    
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cart.push({
-            ...product,
-            quantity: 1
-        });
-    }
-    
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
-    showNotification(`${product.name} added to cart!`);
-}
-
-// Update cart count in navigation
-function updateCartCount() {
-    const cartCount = document.getElementById('cart-count');
-    if (cartCount) {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-    }
 }
 
 // Show notification
@@ -183,10 +148,6 @@ function initializeEventListeners() {
 // Utility functions
 function formatPrice(price) {
     return `₹${price.toFixed(0)}`;
-}
-
-function getCartTotal() {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 }
 
 // Add CSS animation for notifications
